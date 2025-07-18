@@ -1,0 +1,111 @@
+.compose-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 15px; /* Increased padding */
+  border: 1px solid #2f3336; /* Consistent dark border */
+  border-radius: 12px; /* Rounded corners for the form */
+  background-color: #1a1a1a; /* Dark background */
+  margin-bottom: 20px; /* Space below the form */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+}
+
+.compose-form-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px; /* Space between avatar/textarea and image input */
+}
+
+.compose-form-textarea {
+  background: none;
+  border: none; /* No border for a cleaner look */
+  outline: none;
+  width: 100%;
+  min-height: 80px; /* Slightly taller textarea */
+  font-family: 'Inter', sans-serif; /* Use Inter font */
+  font-size: 1.1em; /* Slightly smaller font size */
+  color: #e0e0e0; /* Lighter text color */
+  resize: vertical; /* Allow vertical resizing */
+  padding: 10px; /* Internal padding for textarea */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #222222; /* Darker background for textarea */
+  transition: background-color 0.2s ease;
+}
+
+.compose-form-textarea::placeholder {
+  color: #657786; /* Lighter placeholder text */
+}
+
+.compose-form-textarea:focus {
+  background-color: #2a2a2a; /* Slightly lighter on focus */
+}
+
+.compose-form-image-input {
+  width: 100%;
+  margin-top: 10px; /* Space between textarea and image input */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align file input and preview to the left */
+}
+
+.compose-form-file-input {
+  color: #e0e0e0;
+  margin-bottom: 10px; /* Space below file input */
+}
+
+.compose-form-image-preview {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid #333; /* Subtle border for preview */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Shadow for preview */
+}
+
+.compose-form-options {
+  width: 100%; /* Make options take full width */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align checkbox to the left */
+  margin-top: 15px;
+  padding-left: 60px; /* Align with textarea after avatar */
+}
+
+.compose-form-options label {
+  color: #8899a6; /* Soft gray for label */
+  font-size: 0.9em;
+}
+
+.compose-form-submit {
+  padding: 12px 25px; /* Larger button */
+  background-color: #1da1f2; /* Twitter blue */
+  color: white;
+  border-radius: 50px; /* Pill shape */
+  border: none;
+  font-size: 1em; /* Larger font */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 20px; /* More space above button */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Button shadow */
+}
+
+.compose-form-submit:hover {
+  background-color: #178ace; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.compose-form-submit:active {
+  transform: translateY(0); /* Press effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .compose-form {
+    padding: 10px;
+    border-radius: 8px;
+  }
+  .compose-form-options {
+    padding-left: 10px; /* Adjust padding for smaller screens */
+  }
+}

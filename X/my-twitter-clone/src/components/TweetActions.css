@@ -1,0 +1,64 @@
+.tweet-actions {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 5px 0; /* Vertical padding for the action bar */
+  margin-top: 10px; /* Space above the action bar */
+  margin-bottom: 0; /* No bottom margin needed */
+  border-top: 1px solid #2f3336; /* Separator for actions */
+}
+
+.tweet-actions li {
+  flex: 1; /* Distribute space evenly */
+  text-align: center;
+}
+
+.tweet-actions-button {
+  display: inline-flex; /* Allows icon and text to be on one line */
+  align-items: center;
+  justify-content: center; /* Center content within button */
+  background: none;
+  border: none; /* Remove default button border */
+  color: #8899a6; /* Softer gray for icons and text */
+  padding: 8px 12px; /* More padding for better click/tap area */
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600; /* Slightly bolder text */
+  border-radius: 20px; /* Rounded button shape */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tweet-actions-button:hover {
+  background-color: rgba(29, 161, 242, 0.1); /* Subtle blue highlight on hover */
+  color: #1da1f2; /* Blue text on hover */
+}
+
+.tweet-actions-button svg {
+  margin-right: 8px; /* More space between icon and text */
+}
+
+/* Adjustments for specific icons for better visual balance */
+.tweet-actions-button .fa-retweet {
+  font-size: 1.2em; /* Slightly larger retweet icon */
+}
+
+.tweet-actions-button .fa-heart {
+  font-size: 1.1em; /* Slightly larger heart icon */
+}
+
+/* Style for disabled buttons when tweet is locked */
+.tweet-actions-button:disabled {
+  color: #657786; /* Gray out icons and text */
+  cursor: not-allowed;
+  background-color: transparent; /* No hover effect when disabled */
+}
+
+/* Ensure heart icon also grays out when disabled */
+.tweet-actions-button:disabled .fa-heart {
+  color: #657786 !important; /* Override potential inline color */
+}
+
+/* Specific color for liked heart */
+.tweet-actions-button .fa-heart[color="rgb(224, 36, 94)"] {
+  color: rgb(224, 36, 94); /* Ensure this color is applied when liked */
+}
